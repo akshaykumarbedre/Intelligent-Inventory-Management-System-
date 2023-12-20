@@ -53,3 +53,20 @@ def load_object(file_path):
     except Exception as e:
         logging.info('Exception Occured in load_object function utils')
         raise CustomException(e,sys)
+
+def outlier_remover(data):
+    try:
+        columns = df.select_dtypes(include=['int64', 'float64'])
+        n_std = 3
+        # For each column, remove rows that are more than n_std standard deviations away from the mean
+        for col in columns:
+            mean = df[col].mean()
+            std = df[col].std()
+            df = df[(df[col] >= mean - n_std * std) & (df[col] <= mean + n_std * std)]
+
+        return df
+
+    except Exception as e:
+            logging.info('Exception Occured in outlier remover function utils')
+            raise CustomException(e,sys)
+
