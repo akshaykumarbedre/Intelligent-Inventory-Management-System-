@@ -1,0 +1,21 @@
+[ 2023-12-20 17:42:40,139 ] 17 root - INFO - Data Ingestion method start
+[ 2023-12-20 17:42:40,657 ] 25 root - INFO - Data Ingestion competed
+[ 2023-12-20 17:42:40,688 ] 26 root - INFO - Data Ingestion competed train data 
+   Unnamed: 0  national_inv  lead_time  in_transit_qty  forecast_3_month  forecast_6_month  ...  deck_risk  oe_constraint  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0      129321         170.0       12.0             3.0               0.0              96.0  ...         No             No         No            Yes        No                 No
+1      496434         239.0        8.0             0.0               0.0               0.0  ...        Yes             No         No            Yes        No                 No
+2      475418           0.0        2.0             0.0               4.0               7.0  ...        Yes             No        Yes            Yes        No                 No
+3      495935        2613.0        8.0             0.0               0.0               0.0  ...         No             No         No            Yes        No                 No
+4      843770         338.0        8.0             0.0               0.0               0.0  ...         No             No        Yes            Yes        No                 No
+
+[5 rows x 23 columns]
+[ 2023-12-20 17:42:40,712 ] 27 root - INFO - Data Ingestion competed test data 
+       sku  national_inv  lead_time  in_transit_qty  forecast_3_month  forecast_6_month  ...  deck_risk  oe_constraint  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0  3285085            62        NaN               0                 0                 0  ...        Yes             No         No            Yes        No                 No
+1  3285131             9        NaN               0                 0                 0  ...         No             No        Yes             No        No                 No
+2  3285358            17        8.0               0                 0                 0  ...         No             No         No            Yes        No                 No
+3  3285517             9        2.0               0                 0                 0  ...         No             No        Yes            Yes        No                 No
+4  3285608             2        8.0               0                 0                 0  ...         No             No         No            Yes        No                 No
+
+[5 rows x 23 columns]
+[ 2023-12-20 17:42:40,727 ] 48 root - INFO - initiate Data Tranfermation
