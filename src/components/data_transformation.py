@@ -68,10 +68,11 @@ class DataTransformation:
             test_data=test_data.loc[:,columns]
 
             target_col=["went_on_backorder"]
+            print(train_data.head())
 
             #applying the transformation
-            train_proceess_data=preprocesser.fit(train_data)
-            test_proceess_data=preprocesser.fit_transform(test_data)
+            train_proceess_data=preprocesser_obj.fit_transform(train_data)
+            test_proceess_data=preprocesser_obj.fit_transform(test_data)
             
             #Spilting dependend & independene feature in train data and test data 
             x_train=train_data.drop(target_col,axis=1)
