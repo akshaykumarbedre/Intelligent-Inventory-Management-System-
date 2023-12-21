@@ -24,13 +24,8 @@ class DataTransformation:
         try:
             logging.info("Data Tranfermation piple start")
             
-            categories_column=['potential_issue', 'deck_risk', 'oe_constraint', 'ppap_risk',
-       'stop_auto_buy', 'rev_stop']
-            numreic_column=['national_inv', 'lead_time', 'in_transit_qty', 'forecast_3_month',
-       'forecast_6_month', 'forecast_9_month', 'sales_1_month',
-       'sales_3_month', 'sales_6_month', 'sales_9_month', 'min_bank',
-       'pieces_past_due', 'perf_6_month_avg', 'perf_12_month_avg',
-       'local_bo_qty']
+            categories_column=['potential_issue','went_on_backorder']
+            numreic_column=['national_inv', 'lead_time', 'in_transit_qty', 'forecast_3_month','sales_1_month', 'min_bank', 'perf_6_month_avg']
            
             num_pipe = Pipeline(
                 [("handle missing value",SimpleImputer(strategy='median'))
@@ -52,11 +47,12 @@ class DataTransformation:
 
     def initiate_data_transformation(self,train_path,test_path):
         try:
+
             logging.info("initiate Data Tranfermation")
             train_data=pd.read_csv(train_path)
             test_data=pd.read_csv(test_path)
 
-            preprocesser=self.get_data_transformation_object()
+            preprocesser_obj=self.get_data_transformation_object()
             
             #Balaceing the data 
             majer_class=train_data[train_data['went_on_backorder']=="No"]
@@ -64,12 +60,19 @@ class DataTransformation:
             resample_data=resample(majer_class,n_samples=len(minar_class),random_state=1)
             train_data=pd.concat([resample_data,minar_class])
 
-            #Droping the column
-            #train_data.drop(["sku"],inplace=True,axis=1)
-            test_data.drop(["sku"],inplace=True,axis=1)
+            columns=['national_inv', 'lead_time', 'in_transit_qty', 'forecast_3_month','sales_1_month', 'min_bank',
+        'potential_issue', 'perf_6_month_avg','went_on_backorder']
+
+            #Feature Extration
+            train_data=train_data.loc[:,columns]
+            test_data=test_data.loc[:,columns]
 
             target_col=["went_on_backorder"]
 
+            #applying the transformation
+            train_proceess_data=preprocesser.fit(train_data)
+            test_proceess_data=preprocesser.fit_transform(test_data)
+            
             #Spilting dependend & independene feature in train data and test data 
             x_train=train_data.drop(target_col,axis=1)
             y_train=train_data[target_col]
@@ -77,15 +80,13 @@ class DataTransformation:
             x_test=test_data.drop(target_col,axis=1)
             y_test=test_data[target_col]
             
-            print(train_data.head())
-            #applying the transformation
-            x_train_proceess_data=preprocesser.fit(x_train)
-            x_test_proceess_data=preprocesser.fit_transform(x_test)
+            print(x_train.head())
+
+
             logging.info("Applying preprocessing object on training and testing datasets.")
 
             print(x_train)
-
-        
-        
         except Exception as e:
             raise CustomException(e, sys)
+    
+    
