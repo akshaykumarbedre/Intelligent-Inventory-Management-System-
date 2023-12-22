@@ -8,8 +8,8 @@ import pandas as pd
 
 @dataclass
 class DataingestionConfig:
-    train_data_path = os.path.join("artifacts", "train_data.csv")
-    test_data_path = os.path.join("artifacts", "test_data.csv")
+    train_data_path = os.path.join("artifacts", "Train_data.csv")
+    test_data_path = os.path.join("artifacts", "Test_data.csv")
 
 
 class Dataingestion:
