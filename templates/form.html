@@ -1,78 +1,111 @@
 <html>
+    <style>
+        /* Define some colors for the web page */
+:root {
+  --primary-color: #4CAF50; /* A green color */
+  --secondary-color: #F0F0F0; /* A light gray color */
+  --text-color: #333333; /* A dark gray color */
+}
+
+/* Apply some general styles to the body element */
+body {
+  font-family: Arial, sans-serif; /* Use a common font */
+  font-size: 16px; /* Use a medium font size */
+  color: var(--text-color); /* Use the text color variable */
+  background-color: var(--secondary-color); /* Use the secondary color variable */
+  margin: 0; /* Remove the default margin */
+  padding: 0; /* Remove the default padding */
+}
+
+/* Apply some styles to the form element */
+form {
+  width: 600px; /* Set a fixed width for the form */
+  margin: 20px auto; /* Center the form horizontally and add some vertical margin */
+  padding: 20px; /* Add some padding to the form */
+  border: 1px solid var(--primary-color); /* Add a border to the form with the primary color variable */
+  border-radius: 10px; /* Make the border corners rounded */
+  background-color: white; /* Set the background color of the form to white */
+}
+
+/* Apply some styles to the form-group elements */
+.form-group {
+  display: flex; /* Use a flexible layout for the form groups */
+  align-items: center; /* Align the items vertically */
+  margin-bottom: 10px; /* Add some bottom margin to the form groups */
+}
+
+/* Apply some styles to the label elements */
+label {
+  width: 200px; /* Set a fixed width for the labels */
+  font-weight: bold; /* Make the labels bold */
+}
+
+/* Apply some styles to the input elements */
+input {
+  width: 300px; /* Set a fixed width for the inputs */
+  height: 30px; /* Set a fixed height for the inputs */
+  padding: 5px; /* Add some padding to the inputs */
+  border: 1px solid var(--primary-color); /* Add a border to the inputs with the primary color variable */
+  border-radius: 5px; /* Make the border corners rounded */
+}
+
+/* Apply some styles to the submit button */
+input[type=submit] {
+  width: 100px; /* Set a fixed width for the button */
+  margin-left: 200px; /* Add some left margin to the button */
+  color: white; /* Set the text color of the button to white */
+  background-color: var(--primary-color); /* Set the background color of the button to the primary color variable */
+  cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+}
+
+/* Apply some styles to the button when hovering over it */
+input[type=submit]:hover {
+  opacity: 0.8; /* Reduce the opacity of the button */
+}
+
+    </style>
 <body>
+
 <form action="{{url_for('predict_datapoint')}}" method="POST">
     <div class="form-group">
-        <label for="carat">Carat:</label>
-        <input type="text" id="carat" name="carat" placeholder="Enter carat value (float)">
+        <label for="national_inv">national inventory:</label>
+        <input type="text" id="National_inv" name="national_inv" placeholder="Enter national_inv value (float)">
     </div>
 
     <div class="form-group">
-        <label for="depth">Depth:</label>
-        <input type="text" id="depth" name="depth" placeholder="Enter depth value (float)">
+        <label for="lead_time">Lead Time:</label>
+        <input type="text" id="lead_time" name="lead_time" placeholder="Enter Lead Time value (float)">
     </div>
 
     <div class="form-group">  
-        <label for="table">Table:</label>
-        <input type="text" id="table" name="table" placeholder="Enter table value (float)">
+        <label for="in_transit_qty"> In-Transit Quantity:</label>
+        <input type="text" id="in_transit_qty" name="in_transit_qty" placeholder="Enter In-Transit Quantity value (float)">
     </div>
     
     <div class="form-group">
-        <label for="x">x:</label>
-        <input type="text" id="x" name="x" placeholder="Enter x value (float)">
+        <label for="forecast_3_month">Forecast for 3 Months:</label>
+        <input type="text" id="forecast_3_month" name="forecast_3_month" placeholder="Enter Forecast for 3 Months value (float)">
     </div>
   
     <div class="form-group">
-        <label for="y">y:</label>
-        <input type="text" id="y" name="y" placeholder="Enter y value (float)">
+        <label for="sales_1_month"> Sales for 1 Month:</label>
+        <input type="text" id="sales_1_month" name="sales_1_month" placeholder="Enter Sales for 1 Month value (float)">
+    </div>
+    <div class="form-group">
+        <label for="min_bank">Minimum Stock Level:</label>
+        <input type="text" id="min_bank" name="min_bank" placeholder="Enter min bank value (float)">
     </div>
   
     <div class="form-group">
-        <label for="z">z:</label>
-        <input type="text" id="z" name="z" placeholder="Enter z value (float)">
+        <label for="perf_6_month_avg">Performance for 6 Months Average:</label>
+        <input type="text" id="perf_6_month_avg" name="perf_6_month_avg" placeholder="Enter Performance for 6 Months Average value (float)">
     </div>         
-  
-<div class="form-group">
-  <label for="cut">Cut:</label>
-  <select id="cut" name="cut">
-    <option value="Fair">Fair</option>
-    <option value="Good">Good</option>
-    <option value="Very Good">Very Good</option>
-    <option value="Premium">Premium</option>
-    <option value="Ideal">Ideal</option>
-  </select>
-</div>
-  
-<div class="form-group">
-  <label for="color">Color:</label>
-  <select id="color" name="color">
-    <option value="D">D</option>
-    <option value="E">E</option>
-    <option value="F">F</option>
-    <option value="G">G</option>
-    <option value="H">H</option>
-    <option value="I">I</option>
-    <option value="J">J</option>
-  </select>
-</div>
 
-<div class="form-group">
-  <label for="clarity">Clarity:</label>
-  <select id="clarity" name="clarity">
-    <option value="I1">I1</option>
-    <option value="SI2">SI2</option>
-    <option value="SI1">SI1</option>
-    <option value="VS2">VS2</option>
-    <option value="VS1">VS1</option>
-    <option value="VVS2">VVS2</option>
-    <option value="VVS1">VVS1</option>
-    <option value="IF">IF</option>
-  </select>
-</div>
 
 <div style="clear:both;"></div>
   <input type="submit" value="Submit">
 </form>
 
-{{final_result}}
+<center><h1>{{final_result}}</center></h1>
 </body>
 </html>
