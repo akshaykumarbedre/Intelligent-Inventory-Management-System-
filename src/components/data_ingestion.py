@@ -1,20 +1,21 @@
-from src.exception import CustomException
-from src.logger import logging
-from dataclasses import dataclass
 import os
 import sys
+from dataclasses import dataclass
+
 import pandas as pd
+from src.exception import CustomException
+from src.logger import logging
 
 
 @dataclass
-class DataingestionConfig:
-    train_data_path = os.path.join("artifacts", "Train_data.csv")
-    test_data_path = os.path.join("artifacts", "Test_data.csv")
+class DataIngestionConfig:
+    train_data_path: str = os.path.join("artifacts", "Train_data.csv")
+    test_data_path: str = os.path.join("artifacts", "Test_data.csv")
 
 
-class Dataingestion:
+class DataIngestion:
     def __init__(self):
-        self.ingestion_config = DataingestionConfig()
+        self.ingestion_config = DataIngestionConfig()
 
     def initiate_data_ingestion(self):
         logging.info("Data Ingestion method start")
@@ -35,5 +36,5 @@ class Dataingestion:
             )
 
         except Exception as e:
+            logging.error(f"Error occurred {e} {sys}")
             raise ConnectionResetError(sys, e)
-            logging.error(f"Errror occured occured {e}   {sys}")
