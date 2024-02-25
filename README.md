@@ -1,4 +1,4 @@
-**Backorder Prediction Model**
+<h1>**Backorder Prediction Model**</h1>
 
 This project is about predicting whether a product will go on backorder. The model is trained on various features like national inventory, lead time, in transit quantity, forecast sales for the next 3 months, sales quantity for the prior 1 month, minimum recommended stock level, and 6-month average performance.
 
