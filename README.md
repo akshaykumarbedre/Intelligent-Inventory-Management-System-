@@ -17,21 +17,10 @@ The project is divided into several Python scripts each serving a specific purpo
 
 **Usage**
 
-To train the model, create an instance of the Training_Pipeline class and call the initiate_training_pipeline method. This will ingest the data, transform it, and train the model.
+Run training_pipeline.py to update the model with new data set 
 
-tp = Training_Pipeline()
-
-tp.initiate_training_pipeline()
-
-To make predictions on new data, create an instance of the CustomData class with the feature values, convert it to a dataframe, create an instance of the PredictPipeline class, and call the predict method.
-
-cd = CustomData(national_inv=24, lead_time=8, in_transit_qty=0, forecast_3_month=3456, sales_1_month=10, min_bank=7, perf_6_month_avg=1)
-
-df = cd.get_data_as_dataframe()
-
-pp = PredictPipeline()
-
-print(pp.predict(df))
+Run:  python application.py 
+open local host: You can use the backorder prediction model 
 
 **Note**
 
