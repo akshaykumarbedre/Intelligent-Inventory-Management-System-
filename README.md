@@ -2,7 +2,7 @@
 
 This project is about predicting whether a product will go on backorder. The model is trained on various features like national inventory, lead time, in transit quantity, forecast sales for the next 3 months, sales quantity for the prior 1 month, minimum recommended stock level, and 6-month average performance.
 
-**project Structure**
+<h2>project Structure</h2>
 
 The project is divided into several Python scripts each serving a specific purpose:
 
@@ -15,7 +15,7 @@ The project is divided into several Python scripts each serving a specific purpo
 7. prediction_pipeline.py: This script is responsible for making predictions on new data using the trained model.
 8. training_pipeline.py: This script initiates the training pipeline which includes data ingestion, data transformation, and model training.
 
-#**How to run this app?**
+<h2>How to run this app?</h2>
 
 Code is written in Python 3.7. If you don't have python installed on your system, click here https://www.python.org/downloads/ to install.<br>
 Create virtual environment: conda create -n myenv python=3.7.<br>
