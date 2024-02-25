@@ -17,10 +17,10 @@ The project is divided into several Python scripts each serving a specific purpo
 
 **How to run this app?**
 
-Code is written in Python 3.7. If you don't have python installed on your system, click here https://www.python.org/downloads/ to install.
-Create virtual environment: conda create -n myenv python=3.7
-Activate the environment: conda activate myenv
-Install the packages: pip install -r requirements.txt
+Code is written in Python 3.7. If you don't have python installed on your system, click here https://www.python.org/downloads/ to install.<br>
+Create virtual environment: conda create -n myenv python=3.7.<br>
+Activate the environment: conda activate myenv.<br>
+Install the packages: pip install -r requirements.txt<br>
 Run the app: python application.py 
 
 
