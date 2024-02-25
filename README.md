@@ -17,10 +17,11 @@ The project is divided into several Python scripts each serving a specific purpo
 
 **Usage**
 
-Run training_pipeline.py to update the model with new data set 
-
 Run:  python application.py 
 open local host: You can use the backorder prediction model 
+(optinal)
+Run training_pipeline.py to update the model with new data set 
+
 
 **Note**
 
