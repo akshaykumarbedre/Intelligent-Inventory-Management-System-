@@ -15,12 +15,13 @@ The project is divided into several Python scripts each serving a specific purpo
 7. prediction_pipeline.py: This script is responsible for making predictions on new data using the trained model.
 8. training_pipeline.py: This script initiates the training pipeline which includes data ingestion, data transformation, and model training.
 
-**Usage**
+**How to run this app?**
+Code is written in Python 3.7. If you don't have python installed on your system, click here https://www.python.org/downloads/ to install.
 
-Run:  python application.py 
-open local host: You can use the backorder prediction model 
-(optinal)
-Run training_pipeline.py to update the model with new data set 
+Create virtual environment: conda create -n myenv python=3.7
+Activate the environment: conda activate myenv
+Install the packages: pip install -r requirements.txt
+Run the app: python application.py
 
 
 **Note**
