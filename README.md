@@ -16,12 +16,12 @@ The project is divided into several Python scripts each serving a specific purpo
 8. training_pipeline.py: This script initiates the training pipeline which includes data ingestion, data transformation, and model training.
 
 **How to run this app?**
-Code is written in Python 3.7. If you don't have python installed on your system, click here https://www.python.org/downloads/ to install.
 
+Code is written in Python 3.7. If you don't have python installed on your system, click here https://www.python.org/downloads/ to install.
 Create virtual environment: conda create -n myenv python=3.7
 Activate the environment: conda activate myenv
 Install the packages: pip install -r requirements.txt
-Run the app: python application.py
+Run the app: python application.py 
 
 
 **Note**
