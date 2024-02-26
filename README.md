@@ -23,6 +23,10 @@ Activate the environment: conda activate myenv.<br>
 Install the packages: pip install -r requirements.txt<br>
 Run the app: python application.py 
 
+<h2> Deployment Model in AWS</h2>
+
+Our application is deployed on AWS (Amazon Web Services), leveraging its robust, scalable, and reliable infrastructure.
+http://backorder1-env.eba-u6qs2uzh.ap-southeast-2.elasticbeanstalk.com
 
 **Note**
 
