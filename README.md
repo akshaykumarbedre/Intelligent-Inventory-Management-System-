@@ -26,7 +26,7 @@ Run the app: python application.py
 <h2> Deployment Model in AWS</h2>
 
 Our application is deployed on AWS (Amazon Web Services), leveraging its robust, scalable, and reliable infrastructure.<br>
-link:  http://backorder1-env.eba-u6qs2uzh.ap-southeast-2.elasticbeanstalk.com
+Backorder prediction projest link :  http://backorder1-env.eba-u6qs2uzh.ap-southeast-2.elasticbeanstalk.com
 
 **Note**
 
