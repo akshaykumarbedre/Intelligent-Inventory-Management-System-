@@ -26,8 +26,8 @@ Run the app: python application.py
 <h2> Deployment Model in AWS</h2>
 
 Our application is deployed on AWS (Amazon Web Services), leveraging its robust, scalable, and reliable infrastructure.<br>
-Backorder prediction projest link :  [http://backorder1-env.eba-u6qs2uzh.ap-southeast-2.elasticbeanstalk.com](http://backorderprediction-env.eba-3ivrmujp.ap-south-1.elasticbeanstalk.com)
-
+Backorder prediction projest link :  [http://backorder1-env.eba-u6qs2uzh.ap-southeast-2.elasticbeanstalk.com](http://backorderprediction-env.eba-3ivrmujp.ap-south-1.elasticbeanstalk.com),  
+The link is currently unavailable due to privacy settings on the project
 **Note**
 
 Please ensure that all the necessary data files are in the correct paths as specified in the scripts. Also, make sure to handle any exceptions that may occur during the execution of the scripts. The CustomException class can be used for this purpose.
