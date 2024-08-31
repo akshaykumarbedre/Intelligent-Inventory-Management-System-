@@ -1,0 +1,26 @@
+[ 2024-08-31 19:24:47,285 ] 24 root - INFO - Data Ingestion method start
+[ 2024-08-31 19:24:49,998 ] 38 root - INFO - Data Ingestion competed
+[ 2024-08-31 19:24:50,012 ] 39 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  forecast_6_month  ...  oe_constraint  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0           259        8.0               0                 0                 0  ...             No         No            Yes        No                 No
+1          1421        4.0               0                 0                 0  ...             No         No            Yes        No                 No
+2             4        NaN               0                 0                 0  ...             No         No            Yes        No                 No
+3            78        8.0              11                22                88  ...             No         No            Yes        No                 No
+4             5        4.0               0                 0                 0  ...             No         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-08-31 19:24:50,026 ] 41 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  forecast_6_month  ...  oe_constraint  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0            13       12.0               0                 0                 0  ...             No         No            Yes        No                 No
+1            14        8.0               0                 0                 0  ...             No        Yes            Yes        No                 No
+2            12       12.0               0                 0                 4  ...             No         No            Yes        No                 No
+3             5        4.0               0                 0                 0  ...             No         No            Yes        No                 No
+4           118        2.0               0                 0                 0  ...             No        Yes            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-08-31 19:24:50,054 ] 44 root - INFO - initiate Data Tranfermation
+[ 2024-08-31 19:24:52,158 ] 27 root - INFO - Data Tranfermation piple start
+[ 2024-08-31 19:24:52,175 ] 94 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-08-31 19:24:52,179 ] 28 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2024-08-31 19:24:53,091 ] 48 root - INFO - Model Report : {'RandomForestClassifier': 0.72, 'DecisionTreeClassifier': 0.6998616874135546, 'SGDClassifier': 0.7190412782956059, 'KNeighborsClassifier': 0.7223140495867769, 'GradientBoostingClassifier': 0.7118193891102258}
+[ 2024-08-31 19:24:53,092 ] 59 root - INFO - Best Model Found , Model Name : KNeighborsClassifier , F1 Scare: 0.7223140495867769

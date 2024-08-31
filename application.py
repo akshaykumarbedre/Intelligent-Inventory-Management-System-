@@ -10,6 +10,10 @@ app=application
 def index():
     return render_template('index.html')
 
+@app.route('/train_custem_data',methods=['GET','POST'])
+def training_pipline():
+    return render_template('train_model.html')
+
 @app.route('/predict',methods=['GET','POST'])
 def predict_datapoint():
     if request.method=='GET':

@@ -24,11 +24,11 @@ class Dataingestion:
         logging.info("Data Ingestion method start")
 
         try:
-            # Raw_data = pd.read_csv(self.ingestion_config.data_path)
-            # train_data, test_data =train_test_split(Raw_data)
+            Raw_data = pd.read_csv(self.ingestion_config.data_path)
+            train_data, test_data =train_test_split(Raw_data)
 
-            # train_data.to_csv(self.ingestion_config.train_data_path, index=False)
-            # test_data.to_csv(self.ingestion_config.test_data_path, index=False)
+            train_data.to_csv(self.ingestion_config.train_data_path, index=False)
+            test_data.to_csv(self.ingestion_config.test_data_path, index=False)
 
             train_data = pd.read_csv(self.ingestion_config.train_data_path)
             test_data = pd.read_csv(self.ingestion_config.test_data_path)
@@ -49,3 +49,4 @@ class Dataingestion:
         except Exception as e:
             logging.error(f"Error occurred {e} {sys}")
             raise ConnectionResetError(sys, e)
+
