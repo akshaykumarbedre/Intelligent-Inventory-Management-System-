@@ -134,43 +134,43 @@
 <form action="{{url_for('predict_datapoint')}}" method="POST">
   <div class="form-group">
     <label for="national_inv">National Inventory:</label>
-    <input type="text" id="national_inv" name="national_inv" placeholder="Enter national inventory value  ">
+    <input type="text" id="national_inv" name="national_inv" placeholder="Enter national inventory value  " required>
     <div class="field-info">The total quantity of items available in the national inventory.</div>
   </div>
 
   <div class="form-group">
     <label for="lead_time">Lead Time:</label>
-    <input type="text" id="lead_time" name="lead_time" placeholder="Enter Lead Time value  ">
+    <input type="text" id="lead_time" name="lead_time" placeholder="Enter Lead Time value  " required>
     <div class="field-info">The time (in days) it takes from placing an order to receiving the goods.</div>
   </div>
 
   <div class="form-group">
     <label for="in_transit_qty">In-Transit Quantity:</label>
-    <input type="text" id="in_transit_qty" name="in_transit_qty" placeholder="Enter In-Transit Quantity value  ">
+    <input type="text" id="in_transit_qty" name="in_transit_qty" placeholder="Enter In-Transit Quantity value  " required>
     <div class="field-info">The quantity of items currently in transit from the supplier to the warehouse.</div>
   </div>
     
   <div class="form-group">
     <label for="forecast_3_month">Forecast for 3 Months:</label>
-    <input type="text" id="forecast_3_month" name="forecast_3_month" placeholder="Enter Forecast for 3 Months value  ">
+    <input type="text" id="forecast_3_month" name="forecast_3_month" placeholder="Enter Forecast for 3 Months value  " required>
     <div class="field-info">The predicted sales for the next 3 months.</div>
   </div>
   
   <div class="form-group">
     <label for="sales_1_month">Sales for 1 Month:</label>
-    <input type="text" id="sales_1_month" name="sales_1_month" placeholder="Enter Sales for 1 Month value  ">
+    <input type="text" id="sales_1_month" name="sales_1_month" placeholder="Enter Sales for 1 Month value  " required>
     <div class="field-info">The total sales for the last month.</div>
   </div>
   
   <div class="form-group">
     <label for="min_bank">Minimum Stock Level:</label>
-    <input type="text" id="min_bank" name="min_bank" placeholder="Enter minimum stock level value  ">
+    <input type="text" id="min_bank" name="min_bank" placeholder="Enter minimum stock level value  " required>
     <div class="field-info">The minimum quantity of stock that should be available at all times.</div>
   </div>
   
   <div class="form-group">
     <label for="perf_6_month_avg">Performance for 6 Months Average:</label>
-    <input type="text" id="perf_6_month_avg" name="perf_6_month_avg" placeholder="Enter Performance for 6 Months Average value  ">
+    <input type="text" id="perf_6_month_avg" name="perf_6_month_avg" placeholder="Enter Performance for 6 Months Average value  " required>
     <div class="field-info">The average performance (sales, etc.) over the past 6 months.</div>
   </div>         
 
