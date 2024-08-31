@@ -1,0 +1,10 @@
+[ 2024-08-31 18:51:26,598 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-08-31 18:51:26,599 ] 96 werkzeug - INFO -  * Debugger PIN: 119-715-654
+[ 2024-08-31 18:51:29,147 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:51:29] "GET / HTTP/1.1" 200 -
+[ 2024-08-31 18:51:31,241 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:51:31] "[33mGET /form.html HTTP/1.1[0m" 404 -
+[ 2024-08-31 18:51:59,866 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:51:59] "GET / HTTP/1.1" 200 -
+[ 2024-08-31 18:52:00,331 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:52:00] "GET /predict HTTP/1.1" 200 -
+[ 2024-08-31 18:52:02,911 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:52:02] "GET /predict HTTP/1.1" 200 -
+[ 2024-08-31 19:03:35,218 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 19:03:35] "GET /predict HTTP/1.1" 200 -
+[ 2024-08-31 19:03:49,220 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 19:03:49] "GET /predict HTTP/1.1" 200 -
+[ 2024-08-31 19:10:18,695 ] 96 werkzeug - INFO -  * Detected change in 'e:\\pw_proj\\BackOrder_Prediction-main\\src\\components\\data_ingestion.py', reloading

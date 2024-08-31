@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ML-Based Inventory Prediction</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DY5DWSKR5V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DY5DWSKR5V');
+  </script>
+  <style>
+    :root {
+      --primary-color: #4CAF50;
+      --secondary-color: #F0F0F0;
+      --text-color: #333333;
+      --background-color: #FFFFFF;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: var(--text-color);
+      background-color: var(--secondary-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      color: var(--primary-color);
+      font-size: 2em;
+      
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: var(--text-color);
+    }
+
+    form {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid var(--primary-color);
+      border-radius: 10px;
+      background-color: var(--background-color);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid var(--primary-color);
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .field-info {
+      font-size: 0.7em;
+      color: var(--text-color);
+      margin-bottom: 5px;
+    }
+
+    input[type="submit"] {
+      width: 100px;
+      padding: 10px;
+      margin-top: 20px;
+      color: white;
+      background-color: var(--primary-color);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      align-self: center;
+    }
+
+    input[type="submit"]:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 600px) {
+      label {
+        width: 100%;
+      }
+
+      input[type="text"] {
+        width: 100%;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer p {
+      font-size: 0.9em;
+      color: var(--text-color);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Inventory Prediction Form</h1>
+  <p>This form uses a machine learning model to predict inventory levels</p>
+</header>
+
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+  <div class="form-group">
+    <label for="national_inv">National Inventory:</label>
+    <input type="text" id="national_inv" name="national_inv" placeholder="Enter national inventory value  ">
+    <div class="field-info">The total quantity of items available in the national inventory.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="lead_time">Lead Time:</label>
+    <input type="text" id="lead_time" name="lead_time" placeholder="Enter Lead Time value  ">
+    <div class="field-info">The time (in days) it takes from placing an order to receiving the goods.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="in_transit_qty">In-Transit Quantity:</label>
+    <input type="text" id="in_transit_qty" name="in_transit_qty" placeholder="Enter In-Transit Quantity value  ">
+    <div class="field-info">The quantity of items currently in transit from the supplier to the warehouse.</div>
+  </div>
+    
+  <div class="form-group">
+    <label for="forecast_3_month">Forecast for 3 Months:</label>
+    <input type="text" id="forecast_3_month" name="forecast_3_month" placeholder="Enter Forecast for 3 Months value  ">
+    <div class="field-info">The predicted sales for the next 3 months.</div>
+  </div>
+  
+  <div class="form-group">
+    <label for="sales_1_month">Sales for 1 Month:</label>
+    <input type="text" id="sales_1_month" name="sales_1_month" placeholder="Enter Sales for 1 Month value  ">
+    <div class="field-info">The total sales for the last month.</div>
+  </div>
+  
+  <div class="form-group">
+    <label for="min_bank">Minimum Stock Level:</label>
+    <input type="text" id="min_bank" name="min_bank" placeholder="Enter minimum stock level value  ">
+    <div class="field-info">The minimum quantity of stock that should be available at all times.</div>
+  </div>
+  
+  <div class="form-group">
+    <label for="perf_6_month_avg">Performance for 6 Months Average:</label>
+    <input type="text" id="perf_6_month_avg" name="perf_6_month_avg" placeholder="Enter Performance for 6 Months Average value  ">
+    <div class="field-info">The average performance (sales, etc.) over the past 6 months.</div>
+  </div>         
+
+  <input type="submit" value="Submit">
+</form>
+
+<center><h1>{{final_result}}</h1></center>
+
+</body>
+</html>

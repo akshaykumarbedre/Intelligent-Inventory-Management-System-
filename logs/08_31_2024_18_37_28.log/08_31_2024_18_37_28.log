@@ -1,0 +1,25 @@
+[ 2024-08-31 18:37:29,161 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-08-31 18:37:29,165 ] 96 werkzeug - INFO -  * Debugger PIN: 119-715-654
+[ 2024-08-31 18:37:35,956 ] 55 root - INFO - Dataframe Gathered
+[ 2024-08-31 18:37:37,282 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:37:37] "POST / HTTP/1.1" 200 -
+[ 2024-08-31 18:37:48,926 ] 55 root - INFO - Dataframe Gathered
+[ 2024-08-31 18:37:48,931 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:37:48] "POST / HTTP/1.1" 200 -
+[ 2024-08-31 18:37:50,333 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:37:50] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2024-08-31 18:37:50,443 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:37:50] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[ 2024-08-31 18:37:50,680 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:37:50] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[ 2024-08-31 18:37:51,029 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:37:51] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[ 2024-08-31 18:37:51,285 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:37:51] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-08-31 18:38:47,847 ] 55 root - INFO - Dataframe Gathered
+[ 2024-08-31 18:38:47,853 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:38:47] "POST / HTTP/1.1" 200 -
+[ 2024-08-31 18:38:48,948 ] 55 root - INFO - Dataframe Gathered
+[ 2024-08-31 18:38:48,952 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:38:48] "POST / HTTP/1.1" 200 -
+[ 2024-08-31 18:39:15,887 ] 55 root - INFO - Dataframe Gathered
+[ 2024-08-31 18:39:15,894 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:39:15] "POST / HTTP/1.1" 200 -
+[ 2024-08-31 18:39:21,723 ] 55 root - INFO - Dataframe Gathered
+[ 2024-08-31 18:39:21,728 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:39:21] "POST / HTTP/1.1" 200 -
+[ 2024-08-31 18:39:22,387 ] 55 root - INFO - Dataframe Gathered
+[ 2024-08-31 18:39:22,393 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:39:22] "POST / HTTP/1.1" 200 -
+[ 2024-08-31 18:39:23,552 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:39:23] "GET / HTTP/1.1" 200 -
+[ 2024-08-31 18:47:57,115 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:47:57] "GET / HTTP/1.1" 200 -
+[ 2024-08-31 18:47:58,173 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 18:47:58] "GET / HTTP/1.1" 200 -
+[ 2024-08-31 18:48:57,546 ] 96 werkzeug - INFO -  * Detected change in 'e:\\pw_proj\\BackOrder_Prediction-main\\application.py', reloading
