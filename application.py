@@ -4,8 +4,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from src.pipelines.prediction_pipeline import CustomData, PredictPipeline
 from src.pipelines.training_pipeline import Training_Pipeline
 import os
-from functools import wraps
-import sqlite3
 from src.logger import logging
 
 app = Flask(__name__)
