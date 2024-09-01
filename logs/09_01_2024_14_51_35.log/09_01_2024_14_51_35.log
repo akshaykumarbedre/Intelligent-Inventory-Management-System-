@@ -1,0 +1,82 @@
+[ 2024-09-01 14:51:37,236 ] 99 root - INFO - Starting the Flask application
+[ 2024-09-01 14:51:37,243 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-09-01 14:51:37,245 ] 96 werkzeug - INFO -  * Debugger PIN: 119-715-654
+[ 2024-09-01 14:51:45,539 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 14:51:45,542 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:51:45] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 14:51:47,268 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:51:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2024-09-01 14:52:14,319 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 14:52:14,322 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:52:14] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 14:52:54,114 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 14:52:54,114 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:52:54] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 14:52:54,725 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 14:52:54,725 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:52:54] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 14:53:40,375 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 14:53:40,376 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:53:40] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 14:54:13,529 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 14:54:13,529 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:54:13] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 14:54:24,443 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 14:54:24,445 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:54:24] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 14:55:25,261 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 14:55:25,261 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:55:25] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 14:55:30,016 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 14:55:30,016 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:55:30] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 14:56:17,644 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 14:56:17,647 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:56:17] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 14:56:30,013 ] 68 root - INFO - Accessing prediction form
+[ 2024-09-01 14:56:30,020 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:56:30] "GET /predict HTTP/1.1" 200 -
+[ 2024-09-01 14:56:34,408 ] 62 root - INFO - Accessing train_model page
+[ 2024-09-01 14:56:34,412 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 14:56:34] "GET /train_custom_data HTTP/1.1" 200 -
+[ 2024-09-01 15:00:17,621 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:00:17,621 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:00:17] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:00:18,426 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:00:18,427 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:00:18] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:02:08,646 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:02:08,646 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:02:08] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:02:41,524 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:02:41,527 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:02:41] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:03:02,262 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:03:02,262 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:03:02] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:04:48,336 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:04:48,340 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:04:48] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:05:19,561 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:05:19,561 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:05:19] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:05:30,803 ] 62 root - INFO - Accessing train_model page
+[ 2024-09-01 15:05:30,803 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:05:30] "GET /train_custom_data HTTP/1.1" 200 -
+[ 2024-09-01 15:05:33,743 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:05:33,744 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:05:33] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:05:59,194 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:05:59,194 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:05:59] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:07:25,560 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:07:25,560 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:07:25] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:08:22,142 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:08:22,145 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:08:22] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:08:35,619 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:08:35,622 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:08:35] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:09:03,820 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:09:03,820 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:09:03] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:10:03,216 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:10:03,219 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:10:03] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:10:18,463 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:10:18,466 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:10:18] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:10:29,458 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:10:29,458 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:10:29] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:10:36,361 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:10:36,361 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:10:36] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:10:37,285 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:10:37,285 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:10:37] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:11:00,340 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:11:00,340 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:11:00] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:11:09,864 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:11:09,866 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:11:09] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:11:36,238 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:11:36,239 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:11:36] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:12:02,996 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:12:02,996 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:12:02] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:12:36,876 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:12:36,876 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:12:36] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:12:55,139 ] 26 root - INFO - Accessing index page
+[ 2024-09-01 15:12:55,139 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:12:55] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 15:16:02,033 ] 68 root - INFO - Accessing prediction form
+[ 2024-09-01 15:16:02,034 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:16:02] "GET /predict HTTP/1.1" 200 -
+[ 2024-09-01 15:16:05,115 ] 62 root - INFO - Accessing train_model page
+[ 2024-09-01 15:16:05,116 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 15:16:05] "GET /train_custom_data HTTP/1.1" 200 -
