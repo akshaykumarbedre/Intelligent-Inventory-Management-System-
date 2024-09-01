@@ -1,151 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ML-Based Inventory Prediction - Home</title>
     <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DY5DWSKR5V"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DY5DWSKR5V');
-  </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DY5DWSKR5V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-DY5DWSKR5V');
+    </script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-:root {
-    --primary-color: #4CAF50;
-    --secondary-color: #F0F0F0;
-    --text-color: #333333;
-    --background-color: #FFFFFF;
-    --accent-color: #2196F3;
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #F0F0F0;
+            --text-color: #333333;
+            --background-color: #FFFFFF;
+            --accent-color: #2196F3;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 16px;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            animation: fadeIn 1s ease-out;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .background-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(45deg, var(--secondary-color) 25%, transparent 25%),
+                linear-gradient(-45deg, var(--secondary-color) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, var(--secondary-color) 75%),
+                linear-gradient(-45deg, transparent 75%, var(--secondary-color) 75%);
+            background-size: 20px 20px;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .container {
+            background-color: var(--background-color);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #1976D2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button.pulse {
+            animation: pulse 0.3s ease-in-out;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .cta-button {
+                display: block;
+                margin: 10px auto;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        .mermaid {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-overview {
+            background-color: var(--background-color);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideIn 0.8s ease-out;
+            max-width: 1200px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow-x: auto;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideIn {
-    from { transform: translateY(-20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 16px;
-    color: var(--text-color);
-    background-color: var(--secondary-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
-    animation: fadeIn 1s ease-out;
-    position: relative;
-    overflow-x: hidden;
-}
-
-.background-pattern {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(45deg, var(--secondary-color) 25%, transparent 25%),
-                      linear-gradient(-45deg, var(--secondary-color) 25%, transparent 25%),
-                      linear-gradient(45deg, transparent 75%, var(--secondary-color) 75%),
-                      linear-gradient(-45deg, transparent 75%, var(--secondary-color) 75%);
-    background-size: 20px 20px;
-    opacity: 0.1;
-    z-index: -1;
-}
-
-.container {
-    background-color: var(--background-color);
-    padding: 2.5rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideIn 0.8s ease-out;
-}
-
-.container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-h1 {
-    color: var(--primary-color);
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-p {
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 12px 24px;
-    margin: 10px;
-    background-color: var(--accent-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-size: 1.1em;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.cta-button:hover {
-    background-color: #1976D2;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-.cta-button.pulse {
-    animation: pulse 0.3s ease-in-out;
-}
-
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
+    from {
+        opacity: 0;
     }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    .cta-button {
-        display: block;
-        margin: 10px auto;
+    to {
+        opacity: 1;
     }
 }
+
+
     </style>
 </head>
+
 <body>
     <div class="background-pattern"></div>
-    
+
     <div class="container">
-        <h1>ML-Based Inventory Prediction</h1>
-        <p>Welcome to our intelligent inventory management system. Predict inventory levels using advanced machine learning algorithms, optimizing your supply chain for maximum efficiency.</p>
+        <h1>BackOrder Prediction</h1>
+        <p>Welcome to our intelligent inventory management system. Predict inventory levels using advanced machine
+            learning algorithms, optimizing your supply chain for maximum efficiency.</p>
         <a href="/train_custom_data" class="cta-button">Train on Custom Data</a>
         <a href="/predict" class="cta-button">Start Prediction</a>
     </div>
@@ -154,7 +229,7 @@ p {
 
     <script>
         document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', function(e) {
+            button.addEventListener('click', function (e) {
                 e.preventDefault();
                 this.classList.add('pulse');
                 setTimeout(() => {
@@ -162,20 +237,77 @@ p {
                 }, 300);
             });
 
-            button.addEventListener('animationend', function() {
+            button.addEventListener('animationend', function () {
                 this.classList.remove('pulse');
             });
         });
 
         // Add hover animation to nav links
         document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('mouseenter', function() {
+            link.addEventListener('mouseenter', function () {
                 this.style.animation = 'pulse 0.5s';
             });
-            link.addEventListener('animationend', function() {
+            link.addEventListener('animationend', function () {
                 this.style.animation = '';
             });
         });
     </script>
+
+  
+    <div class="container">
+
+        <h1>Architecture of ML Project</h1>
+
+        <pre class="mermaid">
+        graph TD
+            classDef pipeline fill:#f9d5e5,stroke:#333,stroke-width:2px;
+            classDef process fill:#eeac99,stroke:#333,stroke-width:2px;
+            classDef data fill:#e6f3ff,stroke:#333,stroke-width:2px;
+            classDef model fill:#b6e2d3,stroke:#333,stroke-width:2px;
+            classDef keyStep fill:#fae3d9,stroke:#333,stroke-width:2px;
+
+            subgraph Training Pipeline
+                A[Start Training]:::pipeline --> B[Data Ingestion]
+                B --> C[Data Transformation]
+                C --> D[Model Training]
+                D --> E[Model Evaluation]
+                E --> F[Save Best Model]
+                F --> G[Save Preprocessor]
+                
+                B --> |Raw Data| H[(Train Data)]:::data
+                B --> |Raw Data| I[(Test Data)]:::data
+                C --> |Processed Data| J[(Processed Train Data)]:::data
+                C --> |Processed Data| K[(Processed Test Data)]:::data
+                F --> |Best Model| L[(Model.pkl)]:::model
+                G --> |Preprocessor| M[(Preprocessor.pkl)]:::model
+            end
+            
+            subgraph Prediction Pipeline
+                N[Start Prediction]:::pipeline --> O[Load Preprocessor]
+                O --> P[Load Model]
+                P --> Q[Receive Input Data]
+                Q --> R[Preprocess Input]
+                R --> S[Make Prediction]
+                S --> T[Return Result]
+                
+                O --> |Load| M
+                P --> |Load| L
+            end
+            
+            subgraph Key Steps
+                B[Data Ingestion:<br>1. Load CSV<br>2. Train-Test Split]:::keyStep
+                C[Data Transformation:<br>1. Handle Missing Values<br>2. Feature Scaling<br>3. Outlier Removal<br>4. Target Encoding]:::keyStep
+                D[Model Training:<br>1. Train Multiple Models<br>2. Hyperparameter Tuning]:::keyStep
+                E[Model Evaluation:<br>1. Calculate Metrics<br>2. Select Best Model]:::keyStep
+                R[Preprocess Input:<br>1. Apply Same Transformations<br>as Training Data]:::keyStep
+            end
+
+            class A,N pipeline;
+            class B,C,D,E,F,G,O,P,Q,R,S,T process;
+            class H,I,J,K data;
+            class L,M model;
+        </pre>
+    </div>
 </body>
+
 </html>
