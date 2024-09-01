@@ -1,6 +1,5 @@
 from flask import Flask, request, render_template, redirect, url_for, flash, session
 from werkzeug.utils import secure_filename
-from werkzeug.security import generate_password_hash, check_password_hash
 from src.pipelines.prediction_pipeline import CustomData, PredictPipeline
 from src.pipelines.training_pipeline import Training_Pipeline
 import os
