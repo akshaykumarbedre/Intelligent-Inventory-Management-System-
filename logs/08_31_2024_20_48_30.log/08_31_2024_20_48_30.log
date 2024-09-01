@@ -1,0 +1,16 @@
+[ 2024-08-31 20:48:30,404 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.194.63:5000
+[ 2024-08-31 20:48:30,404 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-08-31 20:48:30,405 ] 96 werkzeug - INFO -  * Restarting with stat
+[ 2024-08-31 20:48:31,012 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-08-31 20:48:31,014 ] 96 werkzeug - INFO -  * Debugger PIN: 119-715-654
+[ 2024-08-31 20:48:34,749 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:48:34] "[33mGET /train_custem_data HTTP/1.1[0m" 404 -
+[ 2024-08-31 20:48:36,442 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:48:36] "[33mGET /train_custem_data HTTP/1.1[0m" 404 -
+[ 2024-08-31 20:48:36,969 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:48:36] "[33mGET /train_custem_data HTTP/1.1[0m" 404 -
+[ 2024-08-31 20:48:37,278 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:48:37] "[33mGET /train_custem_data HTTP/1.1[0m" 404 -
+[ 2024-08-31 20:48:49,656 ] 55 root - INFO - Dataframe Gathered
+[ 2024-08-31 20:48:51,215 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:48:51] "POST /predict HTTP/1.1" 200 -
+[ 2024-08-31 20:48:54,653 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:48:54] "GET / HTTP/1.1" 200 -
+[ 2024-08-31 20:48:56,432 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:48:56] "[33mGET /train_custem_data HTTP/1.1[0m" 404 -

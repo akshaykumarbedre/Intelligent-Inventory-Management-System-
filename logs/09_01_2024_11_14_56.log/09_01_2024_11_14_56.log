@@ -1,0 +1,29 @@
+[ 2024-09-01 11:14:57,667 ] 24 root - INFO - Data Ingestion method start
+[ 2024-09-01 11:15:00,913 ] 38 root - INFO - Data Ingestion competed
+[ 2024-09-01 11:15:00,929 ] 39 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  forecast_6_month  ...  oe_constraint  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0            60       52.0               0                 0                 0  ...             No         No            Yes        No                 No
+1             3        9.0               0                 1                 1  ...             No         No            Yes        No                 No
+2             2       12.0               0                 0                 0  ...             No         No            Yes        No                 No
+3            17        9.0               4                 2                20  ...             No         No            Yes        No                 No
+4            13       12.0               0                 0                 0  ...             No         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:15:00,947 ] 41 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  forecast_6_month  ...  oe_constraint  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0           623        8.0             123               713              1521  ...             No         No            Yes        No                 No
+1             2        9.0               0                 0                 0  ...             No         No            Yes        No                 No
+2             0        2.0               0                 0                 0  ...             No         No            Yes        No                 No
+3             6        8.0               0                 0                 0  ...             No         No            Yes        No                 No
+4             5        2.0               3                20                35  ...             No         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:15:00,977 ] 44 root - INFO - initiate Data Tranfermation
+[ 2024-09-01 11:15:03,003 ] 27 root - INFO - Data Tranfermation piple start
+[ 2024-09-01 11:15:03,010 ] 94 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-09-01 11:15:03,014 ] 28 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2024-09-01 11:15:04,062 ] 48 root - INFO - Model Report : {'RandomForestClassifier': 0.7809036658141517, 'DecisionTreeClassifier': 0.7400346620450606, 'SGDClassifier': 0.7253814147018031, 'KNeighborsClassifier': 0.7314725697786333, 'GradientBoostingClassifier': 0.7964444444444445}
+[ 2024-09-01 11:15:04,063 ] 59 root - INFO - Best Model Found , Model Name : GradientBoostingClassifier , F1 Scare: 0.7964444444444445
+[ 2024-09-01 11:15:04,080 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-09-01 11:15:04,082 ] 96 werkzeug - INFO -  * Debugger PIN: 117-434-498
+[ 2024-09-01 11:15:07,924 ] 96 werkzeug - INFO -  * Detected change in 'e:\\pw_proj\\BackOrder_Prediction-main\\src\\pipelines\\training_pipeline.py', reloading

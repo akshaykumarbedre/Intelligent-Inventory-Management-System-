@@ -1,0 +1,33 @@
+[ 2024-09-01 11:29:40,960 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-09-01 11:29:40,963 ] 96 werkzeug - INFO -  * Debugger PIN: 117-434-498
+[ 2024-09-01 11:29:42,812 ] 25 root - INFO - Data Ingestion method start
+[ 2024-09-01 11:29:42,968 ] 44 root - INFO - Data Ingestion competed
+[ 2024-09-01 11:29:42,985 ] 45 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0           254        8.0              17               300  ...        Yes            Yes        No                 No
+1          2858        4.0              68                 0  ...         No            Yes        No                 No
+2             3       12.0               0                 0  ...         No            Yes        No                 No
+3            51        2.0               0                 0  ...         No            Yes        No                 No
+4             5        4.0               2                 1  ...         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:29:43,000 ] 47 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0            62        8.0               0                90  ...         No            Yes        No                 No
+1             2        NaN               0                 0  ...         No            Yes        No                 No
+2            30        8.0               0                34  ...         No            Yes        No                 No
+3             0        2.0               1               218  ...         No            Yes        No                Yes
+4          1235        8.0               0              2728  ...         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:29:43,001 ] 44 root - INFO - initiate Data Tranfermation
+[ 2024-09-01 11:29:43,111 ] 27 root - INFO - Data Tranfermation piple start
+[ 2024-09-01 11:29:43,118 ] 94 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-09-01 11:29:43,119 ] 28 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2024-09-01 11:29:43,409 ] 48 root - INFO - Model Report : {'RandomForestClassifier': 0.780952380952381, 'DecisionTreeClassifier': 0.7499999999999999, 'SGDClassifier': 0.7450980392156863, 'KNeighborsClassifier': 0.7551020408163265, 'GradientBoostingClassifier': 0.7500000000000001}
+[ 2024-09-01 11:29:43,410 ] 59 root - INFO - Best Model Found , Model Name : RandomForestClassifier , F1 Scare: 0.780952380952381
+[ 2024-09-01 11:29:43,417 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:29:43] "POST /train_custom_data HTTP/1.1" 200 -
+[ 2024-09-01 11:29:47,584 ] 25 root - INFO - Data Ingestion method start
+[ 2024-09-01 11:29:47,585 ] 56 root - ERROR - Error occurred 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte <module 'sys' (built-in)>
+[ 2024-09-01 11:29:47,585 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:29:47] "POST /train_custom_data HTTP/1.1" 200 -
+[ 2024-09-01 11:30:38,820 ] 96 werkzeug - INFO -  * Detected change in 'e:\\pw_proj\\BackOrder_Prediction-main\\application.py', reloading

@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Excel File - Inventory Prediction</title>
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
         :root {
             --primary-color: #4CAF50;
             --secondary-color: #F0F0F0;
             --text-color: #333333;
             --background-color: #FFFFFF;
+            --accent-color: #2196F3;
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 16px;
             color: var(--text-color);
             background-color: var(--secondary-color);
@@ -25,27 +36,37 @@
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
+            animation: fadeIn 1s ease-out;
         }
 
         .container {
             background-color: var(--background-color);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 500px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         h1 {
             color: var(--primary-color);
-            font-size: 2em;
-            margin-bottom: 1rem;
+            font-size: 2.2em;
+            margin-bottom: 1.5rem;
             text-align: center;
+            animation: slideIn 0.8s ease-out;
         }
 
         p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
             text-align: center;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-out 0.5s both;
         }
 
         form {
@@ -59,6 +80,7 @@
             overflow: hidden;
             display: inline-block;
             cursor: pointer;
+            margin-bottom: 1rem;
         }
 
         .file-input-wrapper input[type=file] {
@@ -72,44 +94,89 @@
 
         .file-input-wrapper .btn {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
+            padding: 12px 24px;
+            background-color: var(--accent-color);
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             font-size: 1em;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .file-input-wrapper .btn:hover {
-            background-color: #45a049;
+            background-color: #1976D2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
 
         #file-chosen {
             margin-left: 0.5rem;
             font-style: italic;
+            color: #666;
         }
 
         .submit-btn {
-            margin-top: 1rem;
-            padding: 10px 20px;
+            margin-top: 1.5rem;
+            padding: 12px 24px;
             background-color: var(--primary-color);
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             font-size: 1em;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .submit-btn:hover {
             background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
 
         .footer {
-            margin-top: 2rem;
+            margin-top: 2.5rem;
             font-size: 0.9em;
             text-align: center;
+            color: #666;
+            animation: fadeIn 1s ease-out 1s both;
+        }
+
+        .demo-section {
+            margin-top: 2.5rem;
+            text-align: center;
+            animation: fadeIn 1s ease-out 0.8s both;
+        }
+
+        .demo-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .demo-link:hover {
+            color: #1976D2;
+            text-decoration: underline;
+        }
+
+        .error-message, .success-message {
+            margin-top: 1rem;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .error-message {
+            background-color: #FFCDD2;
+            color: #B71C1C;
+        }
+
+        .success-message {
+            background-color: #C8E6C9;
+            color: #1B5E20;
         }
     </style>
 </head>
@@ -117,7 +184,7 @@
     <div class="container">
         <h1>Upload Excel File</h1>
         <p>Upload your Excel file containing inventory data for prediction.</p>
-        <form action="/upload" method="post" enctype="multipart/form-data">
+        <form action="/train_custom_data" method="post" enctype="multipart/form-data">
             <div class="file-input-wrapper">
                 <button type="button" class="btn">Choose file</button>
                 <input type="file" name="file" id="actual-btn" accept=".xls,.xlsx,.csv" required>
@@ -125,8 +192,18 @@
             <span id="file-chosen">No file chosen</span>
             <button type="submit" class="submit-btn">Upload</button>
         </form>
+        
+        <div class="demo-section">
+            <p>New to our system? Download our sample Excel file to see the expected format:</p>
+            <a href="static\Temp_data.csv" download class="demo-link">Download Demo Excel Sheet</a>
+        </div>
+        {% if error %}
+        <div class="error-message">{{ error }}</div>
+        {% endif %}
+        {% if success %}
+        <div class="success-message">{{ success }}</div>
+        {% endif %}
     </div>
-    
     <div class="footer">
         <p>&copy; 2024 Inventory Prediction System. All rights reserved.</p>
     </div>
@@ -137,6 +214,7 @@
 
         actualBtn.addEventListener('change', function(){
             fileChosen.textContent = this.files[0] ? this.files[0].name : 'No file chosen';
+            fileChosen.style.animation = 'fadeIn 0.5s ease-out';
         });
     </script>
 </body>

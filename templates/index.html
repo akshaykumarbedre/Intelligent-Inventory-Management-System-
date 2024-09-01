@@ -4,76 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ML-Based Inventory Prediction - Home</title>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DY5DWSKR5V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DY5DWSKR5V');
+  </script>
     <style>
-        :root {
-            --primary-color: #4CAF50;
-            --secondary-color: #F0F0F0;
-            --text-color: #333333;
-            --background-color: #FFFFFF;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            color: var(--text-color);
-            background-color: var(--secondary-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #F0F0F0;
+    --text-color: #333333;
+    --background-color: #FFFFFF;
+    --accent-color: #2196F3;
+}
 
-        .container {
-            text-align: center;
-            background-color: var(--background-color);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-        h1 {
-            color: var(--primary-color);
-            font-size: 2.5em;
-            margin-bottom: 1rem;
-        }
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
 
-        p {
-            font-size: 1.2em;
-            margin-bottom: 2rem;
-        }
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
 
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
-        }
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 1s ease-out;
+    position: relative;
+    overflow-x: hidden;
+}
 
-        .cta-button:hover {
-            background-color: #45a049;
-        }
+.background-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(45deg, var(--secondary-color) 25%, transparent 25%),
+                      linear-gradient(-45deg, var(--secondary-color) 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, var(--secondary-color) 75%),
+                      linear-gradient(-45deg, transparent 75%, var(--secondary-color) 75%);
+    background-size: 20px 20px;
+    opacity: 0.1;
+    z-index: -1;
+}
 
-        .footer {
-            margin-top: 2rem;
-            font-size: 0.9em;
-        }
+.container {
+    background-color: var(--background-color);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideIn 0.8s ease-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button.pulse {
+    animation: pulse 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .cta-button {
+        display: block;
+        margin: 10px auto;
+    }
+}
     </style>
 </head>
 <body>
+    <div class="background-pattern"></div>
+    
     <div class="container">
         <h1>ML-Based Inventory Prediction</h1>
-        <p>Welcome to our intelligent inventory management system. Predict inventory levels using advanced machine learning algorithms.</p>
+        <p>Welcome to our intelligent inventory management system. Predict inventory levels using advanced machine learning algorithms, optimizing your supply chain for maximum efficiency.</p>
+        <a href="/train_custom_data" class="cta-button">Train on Custom Data</a>
         <a href="/predict" class="cta-button">Start Prediction</a>
-        <a href="/train_custem_data" class="cta-button">Train on Custom data</a>
     </div>
-    <div class="footer">
-        <p>&copy; 2024 Inventory Prediction System. All rights reserved.</p>
-    </div>
+
+
+
+    <script>
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.classList.add('pulse');
+                setTimeout(() => {
+                    window.location.href = this.getAttribute('href');
+                }, 300);
+            });
+
+            button.addEventListener('animationend', function() {
+                this.classList.remove('pulse');
+            });
+        });
+
+        // Add hover animation to nav links
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.animation = 'pulse 0.5s';
+            });
+            link.addEventListener('animationend', function() {
+                this.style.animation = '';
+            });
+        });
+    </script>
 </body>
 </html>

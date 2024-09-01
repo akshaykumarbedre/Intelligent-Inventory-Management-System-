@@ -26,9 +26,6 @@ class DataTransformation:
         try:
             logging.info("Data Tranfermation piple start")
             
-            numreic_column = ['national_inv', 'lead_time', 'in_transit_qty',
-                              'forecast_3_month', 'sales_1_month', 'min_bank', 'perf_6_month_avg']
-
             num_pipe = Pipeline(
                 [("handle missing value", SimpleImputer(strategy='median')), 
                 ('scaler', StandardScaler())

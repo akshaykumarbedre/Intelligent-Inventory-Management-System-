@@ -1,0 +1,4 @@
+[ 2024-08-31 20:53:16,462 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-08-31 20:53:16,464 ] 96 werkzeug - INFO -  * Debugger PIN: 119-715-654
+[ 2024-08-31 20:53:20,726 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:53:20] "[33mPOST /upload HTTP/1.1[0m" 404 -
+[ 2024-08-31 20:55:19,642 ] 96 werkzeug - INFO -  * Detected change in 'e:\\pw_proj\\BackOrder_Prediction-main\\application.py', reloading

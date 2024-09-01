@@ -53,15 +53,16 @@ class ModelTrainer:
             
             
             best_model = models[best_model_name]
-
-            print(f'Best Model Found , Model Name : {best_model_name} , F1 Score : {best_model_score}')
+            result=f'Best Model Found , Model Name : {best_model_name} , Accuary is : {round(best_model_score*100,2)}'
+            print(result)
             print('\n====================================================================================\n')
-            logging.info(f'Best Model Found , Model Name : {best_model_name} , F1 Scare: {best_model_score}')
+            logging.info(f'{result}')
 
             save_object(
                  file_path=self.model_trainer_config.trained_model_file_path,
                  obj=best_model
             )
+            return result
           
 
         except Exception as e:
@@ -90,26 +91,3 @@ class ModelTrainer:
         except Exception as e:
                 logging.info('Exception occured during model training')
                 raise CustomException(e,sys)
-
-    def finetune_best_model(self,
-                            best_model_object:object,
-                            best_model_name,
-                            X_train,
-                            y_train,
-                            ) -> object:
-        
-        try:
-
-            model_param_grid = self.utils.read_yaml_file(self.model_trainer_config.model_config_file_path)["model_selection"]["model"][best_model_name]["search_param_grid"]
-            grid_search = GridSearchCV(
-                best_model_object, param_grid=model_param_grid, cv=5, n_jobs=-1, verbose=1 )
-            grid_search.fit(X_train, y_train)
-            best_params = grid_search.best_params_
-            print("best params are:", best_params)
-            finetuned_model = best_model_object.set_params(**best_params)
-            
-
-            return finetuned_model
-        
-        except Exception as e:
-            raise CustomException(e,sys)

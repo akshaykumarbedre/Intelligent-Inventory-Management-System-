@@ -1,0 +1,5 @@
+[ 2024-08-31 20:57:02,862 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-08-31 20:57:02,864 ] 96 werkzeug - INFO -  * Debugger PIN: 119-715-654
+[ 2024-08-31 20:57:03,878 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:57:03] "GET /train_custom_data HTTP/1.1" 200 -
+[ 2024-08-31 20:57:06,393 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:57:06] "POST /train_custom_data HTTP/1.1" 200 -
+[ 2024-08-31 20:57:34,416 ] 96 werkzeug - INFO -  * Detected change in 'e:\\pw_proj\\BackOrder_Prediction-main\\application.py', reloading

@@ -1,0 +1,2 @@
+[ 2024-09-01 11:16:04,867 ] 24 root - INFO - Data Ingestion method start
+[ 2024-09-01 11:16:04,868 ] 50 root - ERROR - Error occurred Invalid file path or buffer object type: <class 'NoneType'> <module 'sys' (built-in)>

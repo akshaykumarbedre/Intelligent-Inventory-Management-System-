@@ -1,0 +1,11 @@
+[ 2024-08-31 20:40:52,686 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-08-31 20:40:52,686 ] 96 werkzeug - INFO -  * Debugger PIN: 119-715-654
+[ 2024-08-31 20:41:03,301 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:41:03] "GET /train_custem_data HTTP/1.1" 200 -
+[ 2024-08-31 20:41:04,429 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:41:04] "[33mGET /demo_inventory.xlsx HTTP/1.1[0m" 404 -
+[ 2024-08-31 20:41:32,741 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:41:32] "GET /train_custem_data HTTP/1.1" 200 -
+[ 2024-08-31 20:41:33,650 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:41:33] "[33mGET /templates/Temp_data.csv HTTP/1.1[0m" 404 -
+[ 2024-08-31 20:41:34,507 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:41:34] "[33mGET /templates/Temp_data.csv HTTP/1.1[0m" 404 -
+[ 2024-08-31 20:41:48,790 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:41:48] "[33mGET /templates/Temp_data.csv HTTP/1.1[0m" 404 -
+[ 2024-08-31 20:41:52,363 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:41:52] "[33mGET /templates/Temp_data.csv HTTP/1.1[0m" 404 -
+[ 2024-08-31 20:44:51,377 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:44:51] "GET /train_custem_data HTTP/1.1" 200 -
+[ 2024-08-31 20:44:53,272 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:44:53] "GET /static/Temp_data.csv HTTP/1.1" 200 -

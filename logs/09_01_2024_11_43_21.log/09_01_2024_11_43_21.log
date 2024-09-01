@@ -1,0 +1,59 @@
+[ 2024-09-01 11:43:22,053 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-09-01 11:43:22,056 ] 96 werkzeug - INFO -  * Debugger PIN: 117-434-498
+[ 2024-09-01 11:43:22,702 ] 25 root - INFO - Data Ingestion method start
+[ 2024-09-01 11:43:26,390 ] 44 root - INFO - Data Ingestion competed
+[ 2024-09-01 11:43:26,409 ] 45 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0             4        8.0               0                 0  ...         No            Yes        No                 No
+1             9        2.0               0                 9  ...         No            Yes        No                 No
+2            61       12.0               0                15  ...         No            Yes        No                 No
+3             2        NaN               0                 0  ...         No            Yes        No                 No
+4            29       12.0               0                 0  ...        Yes            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:43:26,426 ] 47 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0            50        8.0               0                 0  ...         No            Yes        No                 No
+1             0        8.0               0                11  ...         No            Yes        No                Yes
+2             1       12.0               0                 1  ...         No            Yes        No                 No
+3           913        8.0               0                 0  ...        Yes            Yes        No                 No
+4           150        8.0               0                 0  ...         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:43:26,455 ] 44 root - INFO - initiate Data Tranfermation
+[ 2024-09-01 11:43:29,040 ] 27 root - INFO - Data Tranfermation piple start
+[ 2024-09-01 11:43:29,052 ] 94 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-09-01 11:43:29,055 ] 28 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2024-09-01 11:43:30,146 ] 48 root - INFO - Model Report : {'RandomForestClassifier': 0.7408513816280806, 'DecisionTreeClassifier': 0.7204385277995301, 'SGDClassifier': 0.7582139848357202, 'KNeighborsClassifier': 0.7314578005115091, 'GradientBoostingClassifier': 0.7344550109729334}
+[ 2024-09-01 11:43:30,147 ] 59 root - INFO - Best Model Found , Model Name : SGDClassifier , Accuary is : 75.82
+[ 2024-09-01 11:43:30,156 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:43:30] "POST /train_custom_data HTTP/1.1" 200 -
+[ 2024-09-01 11:43:44,109 ] 25 root - INFO - Data Ingestion method start
+[ 2024-09-01 11:43:47,445 ] 44 root - INFO - Data Ingestion competed
+[ 2024-09-01 11:43:47,461 ] 45 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0            14        9.0               0                 0  ...         No            Yes        No                 No
+1             0        8.0               0                 0  ...         No            Yes        No                 No
+2            16        8.0               0                 0  ...         No            Yes        No                 No
+3           255        2.0              32               280  ...         No            Yes        No                 No
+4           400        4.0               0               144  ...         No             No        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:43:47,476 ] 47 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0          2286        8.0              34               180  ...         No            Yes        No                 No
+1          1450        8.0               0                 0  ...         No            Yes        No                 No
+2             2       12.0               0                 0  ...         No            Yes        No                 No
+3            16        9.0               0                20  ...         No            Yes        No                 No
+4            20        8.0               0                 0  ...         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:43:47,504 ] 44 root - INFO - initiate Data Tranfermation
+[ 2024-09-01 11:43:50,072 ] 27 root - INFO - Data Tranfermation piple start
+[ 2024-09-01 11:43:50,081 ] 94 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-09-01 11:43:50,085 ] 28 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2024-09-01 11:43:51,223 ] 48 root - INFO - Model Report : {'RandomForestClassifier': 0.7855626326963907, 'DecisionTreeClassifier': 0.5106382978723405, 'SGDClassifier': 0.7676969092721835, 'KNeighborsClassifier': 0.7479526842584168, 'GradientBoostingClassifier': 0.8257222739981361}
+[ 2024-09-01 11:43:51,224 ] 59 root - INFO - Best Model Found , Model Name : GradientBoostingClassifier , Accuary is : 82.57
+[ 2024-09-01 11:43:51,233 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:43:51] "POST /train_custom_data HTTP/1.1" 200 -
+[ 2024-09-01 11:44:05,991 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:44:05] "GET /train_custom_data HTTP/1.1" 200 -
+[ 2024-09-01 11:44:18,833 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:44:18] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 11:45:55,505 ] 96 werkzeug - INFO -  * Detected change in 'e:\\pw_proj\\BackOrder_Prediction-main\\src\\components\\data_transformation.py', reloading

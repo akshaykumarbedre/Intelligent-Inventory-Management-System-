@@ -1,0 +1,5 @@
+[ 2024-09-01 11:30:40,375 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-09-01 11:30:40,378 ] 96 werkzeug - INFO -  * Debugger PIN: 117-434-498
+[ 2024-09-01 11:30:40,835 ] 25 root - INFO - Data Ingestion method start
+[ 2024-09-01 11:30:40,838 ] 56 root - ERROR - Error occurred 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte <module 'sys' (built-in)>
+[ 2024-09-01 11:30:40,842 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:30:40] "POST /train_custom_data HTTP/1.1" 200 -

@@ -1,0 +1,4 @@
+[ 2024-08-31 20:56:46,452 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-08-31 20:56:46,453 ] 96 werkzeug - INFO -  * Debugger PIN: 119-715-654
+[ 2024-08-31 20:56:53,143 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:56:53] "[33mPOST /upload HTTP/1.1[0m" 404 -
+[ 2024-08-31 20:56:55,661 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Aug/2024 20:56:55] "GET /train_custom_data HTTP/1.1" 200 -

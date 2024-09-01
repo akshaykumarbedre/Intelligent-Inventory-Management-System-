@@ -1,0 +1,33 @@
+[ 2024-09-01 11:23:19,474 ] 25 root - INFO - Data Ingestion method start
+[ 2024-09-01 11:23:22,358 ] 44 root - INFO - Data Ingestion competed
+[ 2024-09-01 11:23:22,372 ] 45 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0            26        8.0               0                 0  ...         No            Yes        No                 No
+1             1       12.0               0                 0  ...         No            Yes        No                 No
+2            16        4.0               0                 3  ...         No            Yes        No                 No
+3            14        2.0               0                 0  ...         No            Yes        No                 No
+4             2        8.0               0                 0  ...         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:23:22,390 ] 47 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0             0        3.0               0                 2  ...         No            Yes        No                 No
+1             2       12.0               0                 0  ...        Yes            Yes        No                 No
+2           393        8.0              28               387  ...         No            Yes        No                 No
+3            27        2.0               0                 0  ...         No            Yes        No                 No
+4            54        2.0               0                 0  ...         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:23:22,416 ] 44 root - INFO - initiate Data Tranfermation
+[ 2024-09-01 11:23:24,369 ] 27 root - INFO - Data Tranfermation piple start
+[ 2024-09-01 11:23:24,377 ] 94 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-09-01 11:23:24,381 ] 28 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2024-09-01 11:23:25,266 ] 48 root - INFO - Model Report : {'RandomForestClassifier': 0.7509238728750925, 'DecisionTreeClassifier': 0.7399999999999999, 'SGDClassifier': 0.737916950306331, 'KNeighborsClassifier': 0.7571560480147738, 'GradientBoostingClassifier': 0.7378917378917379}
+[ 2024-09-01 11:23:25,266 ] 59 root - INFO - Best Model Found , Model Name : KNeighborsClassifier , F1 Scare: 0.7571560480147738
+[ 2024-09-01 11:23:25,315 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.194.63:5000
+[ 2024-09-01 11:23:25,315 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-09-01 11:23:25,317 ] 96 werkzeug - INFO -  * Restarting with stat
+[ 2024-09-01 11:24:06,356 ] 96 werkzeug - INFO -  * Restarting with stat

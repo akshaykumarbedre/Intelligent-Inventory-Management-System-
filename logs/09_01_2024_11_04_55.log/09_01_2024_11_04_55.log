@@ -1,0 +1,39 @@
+[ 2024-09-01 11:04:56,147 ] 24 root - INFO - Data Ingestion method start
+[ 2024-09-01 11:04:59,201 ] 38 root - INFO - Data Ingestion competed
+[ 2024-09-01 11:04:59,218 ] 39 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  forecast_6_month  ...  oe_constraint  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0            97        8.0               0                 0                 0  ...             No         No            Yes        No                 No
+1            14        4.0               0                 0                 0  ...             No         No            Yes        No                 No
+2            11        NaN               0                 0                 0  ...             No         No            Yes        No                 No
+3           121        8.0              25               169               328  ...             No         No            Yes        No                 No
+4            10        2.0               0                 0                 0  ...             No         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:04:59,232 ] 41 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  forecast_6_month  ...  oe_constraint  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0             7        2.0               0                 0                 0  ...             No         No            Yes        No                 No
+1            94        2.0               0                 0                 0  ...             No         No            Yes        No                 No
+2             2       12.0               0                 0                 0  ...             No        Yes            Yes        No                 No
+3           107        NaN               0                 0                 0  ...             No         No             No        No                 No
+4             8        8.0               0                 8                12  ...             No         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:04:59,257 ] 44 root - INFO - initiate Data Tranfermation
+[ 2024-09-01 11:05:01,442 ] 27 root - INFO - Data Tranfermation piple start
+[ 2024-09-01 11:05:01,451 ] 94 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-09-01 11:05:01,454 ] 28 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2024-09-01 11:05:02,322 ] 48 root - INFO - Model Report : {'RandomForestClassifier': 0.7974947807933194, 'DecisionTreeClassifier': 0.7255717255717256, 'SGDClassifier': 0.7210584343991179, 'KNeighborsClassifier': 0.7444551591128256, 'GradientBoostingClassifier': 0.8225641025641025}
+[ 2024-09-01 11:05:02,323 ] 59 root - INFO - Best Model Found , Model Name : GradientBoostingClassifier , F1 Scare: 0.8225641025641025
+[ 2024-09-01 11:05:02,365 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.194.63:5000
+[ 2024-09-01 11:05:02,365 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-09-01 11:05:02,367 ] 96 werkzeug - INFO -  * Restarting with stat
+[ 2024-09-01 11:09:20,079 ] 96 werkzeug - INFO -  * Restarting with stat
+[ 2024-09-01 11:10:00,488 ] 96 werkzeug - INFO -  * Restarting with stat
+[ 2024-09-01 11:10:50,633 ] 96 werkzeug - INFO -  * Restarting with stat
+[ 2024-09-01 11:12:38,210 ] 96 werkzeug - INFO -  * Restarting with stat
+[ 2024-09-01 11:14:30,244 ] 96 werkzeug - INFO -  * Restarting with stat
+[ 2024-09-01 11:14:56,491 ] 96 werkzeug - INFO -  * Restarting with stat
+[ 2024-09-01 11:15:08,221 ] 96 werkzeug - INFO -  * Restarting with stat

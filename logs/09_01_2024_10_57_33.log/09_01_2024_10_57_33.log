@@ -1,0 +1,40 @@
+[ 2024-09-01 10:57:34,383 ] 24 root - INFO - Data Ingestion method start
+[ 2024-09-01 10:57:38,435 ] 38 root - INFO - Data Ingestion competed
+[ 2024-09-01 10:57:38,453 ] 39 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  ...  stop_auto_buy  rev_stop  went_on_backorder
+0             3        2.0               0  ...            Yes        No                 No
+1            15        8.0               0  ...            Yes        No                 No
+2             4        8.0               0  ...            Yes        No                 No
+3             3        8.0               0  ...            Yes        No                 No
+4          1110        8.0             800  ...            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 10:57:38,470 ] 41 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  ...  stop_auto_buy  rev_stop  went_on_backorder
+0             2        8.0               0  ...            Yes        No                 No
+1           132        NaN               0  ...            Yes        No                 No
+2            29        8.0               0  ...            Yes        No                 No
+3            45        8.0               0  ...            Yes        No                 No
+4             0        2.0               0  ...            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 10:57:38,502 ] 44 root - INFO - initiate Data Tranfermation
+[ 2024-09-01 10:57:40,944 ] 27 root - INFO - Data Tranfermation piple start
+[ 2024-09-01 10:57:40,960 ] 94 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-09-01 10:57:40,967 ] 28 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2024-09-01 10:57:42,093 ] 48 root - INFO - Model Report : {'RandomForestClassifier': 0.7979487179487179, 'DecisionTreeClassifier': 0.6692160611854685, 'SGDClassifier': 0.7810745789895749, 'KNeighborsClassifier': 0.7300724637681159, 'GradientBoostingClassifier': 0.8120456905503635}
+[ 2024-09-01 10:57:42,095 ] 59 root - INFO - Best Model Found , Model Name : GradientBoostingClassifier , F1 Scare: 0.8120456905503635
+[ 2024-09-01 10:57:42,119 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-09-01 10:57:42,123 ] 96 werkzeug - INFO -  * Debugger PIN: 117-434-498
+[ 2024-09-01 10:57:43,062 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 10:57:43] "GET /login HTTP/1.1" 200 -
+[ 2024-09-01 10:57:43,063 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 10:57:43] "GET /login HTTP/1.1" 200 -
+[ 2024-09-01 10:58:02,544 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 10:58:02] "POST /login HTTP/1.1" 200 -
+[ 2024-09-01 10:58:03,584 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 10:58:03] "GET /register HTTP/1.1" 200 -
+[ 2024-09-01 10:58:06,680 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 10:58:06] "[32mPOST /register HTTP/1.1[0m" 302 -
+[ 2024-09-01 10:58:06,892 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 10:58:06] "GET /login HTTP/1.1" 200 -
+[ 2024-09-01 10:58:09,590 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 10:58:09] "GET /register HTTP/1.1" 200 -
+[ 2024-09-01 10:58:12,215 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 10:58:12] "GET /login HTTP/1.1" 200 -
+[ 2024-09-01 10:58:14,056 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 10:58:14] "[32mPOST /login HTTP/1.1[0m" 302 -
+[ 2024-09-01 10:58:14,062 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 10:58:14] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 10:58:23,095 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 10:58:23] "GET /train_custom_data HTTP/1.1" 200 -
+[ 2024-09-01 11:03:19,608 ] 96 werkzeug - INFO -  * Detected change in 'e:\\pw_proj\\BackOrder_Prediction-main\\src\\components\\data_ingestion.py', reloading

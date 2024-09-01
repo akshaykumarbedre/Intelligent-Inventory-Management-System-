@@ -1,0 +1,28 @@
+[ 2024-09-01 11:24:07,585 ] 25 root - INFO - Data Ingestion method start
+[ 2024-09-01 11:24:10,826 ] 44 root - INFO - Data Ingestion competed
+[ 2024-09-01 11:24:10,841 ] 45 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0            78        8.0               3               178  ...         No            Yes        No                 No
+1           169        NaN               0                 0  ...         No             No        No                 No
+2             0        2.0               0                 4  ...         No            Yes        No                 No
+3            32        8.0               0                 0  ...         No            Yes        No                 No
+4             1        8.0               0                 1  ...         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:24:10,855 ] 47 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0           118        8.0               0               225  ...         No            Yes        No                 No
+1         12940        8.0            3290             20000  ...         No            Yes        No                 No
+2           106        8.0              36                72  ...         No            Yes        No                 No
+3          4055       52.0               0                 0  ...         No             No        No                 No
+4           304       12.0               0                 0  ...         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:24:10,880 ] 44 root - INFO - initiate Data Tranfermation
+[ 2024-09-01 11:24:13,223 ] 27 root - INFO - Data Tranfermation piple start
+[ 2024-09-01 11:24:13,233 ] 94 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-09-01 11:24:13,238 ] 28 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2024-09-01 11:24:14,228 ] 48 root - INFO - Model Report : {'RandomForestClassifier': 0.7730956239870341, 'DecisionTreeClassifier': 0.6914893617021277, 'SGDClassifier': 0.746067415730337, 'KNeighborsClassifier': 0.7456978967495221, 'GradientBoostingClassifier': 0.7490465293668954}
+[ 2024-09-01 11:24:14,229 ] 59 root - INFO - Best Model Found , Model Name : RandomForestClassifier , F1 Scare: 0.7730956239870341
+[ 2024-09-01 11:24:14,260 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-09-01 11:24:14,262 ] 96 werkzeug - INFO -  * Debugger PIN: 117-434-498

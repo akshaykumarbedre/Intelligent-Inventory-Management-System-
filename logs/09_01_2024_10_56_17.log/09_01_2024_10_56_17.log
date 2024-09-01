@@ -1,0 +1,29 @@
+[ 2024-09-01 10:56:19,272 ] 24 root - INFO - Data Ingestion method start
+[ 2024-09-01 10:56:22,704 ] 38 root - INFO - Data Ingestion competed
+[ 2024-09-01 10:56:22,729 ] 39 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  ...  stop_auto_buy  rev_stop  went_on_backorder
+0            26        2.0               0  ...            Yes        No                 No
+1             1        NaN               0  ...            Yes        No                 No
+2          1738        8.0               3  ...            Yes        No                 No
+3           106        8.0               0  ...            Yes        No                 No
+4            94        2.0               0  ...            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 10:56:22,746 ] 41 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  ...  stop_auto_buy  rev_stop  went_on_backorder
+0             7        8.0               0  ...            Yes        No                 No
+1             6        8.0               5  ...            Yes        No                 No
+2             8        4.0              24  ...            Yes        No                 No
+3           382       12.0               5  ...            Yes        No                 No
+4            25        NaN               0  ...            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 10:56:22,776 ] 44 root - INFO - initiate Data Tranfermation
+[ 2024-09-01 10:56:24,935 ] 27 root - INFO - Data Tranfermation piple start
+[ 2024-09-01 10:56:24,944 ] 94 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-09-01 10:56:24,948 ] 28 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2024-09-01 10:56:25,928 ] 48 root - INFO - Model Report : {'RandomForestClassifier': 0.8149568552253116, 'DecisionTreeClassifier': 0.6813627254509017, 'SGDClassifier': 0.7664233576642336, 'KNeighborsClassifier': 0.7597765363128491, 'GradientBoostingClassifier': 0.8372978116079924}
+[ 2024-09-01 10:56:25,928 ] 59 root - INFO - Best Model Found , Model Name : GradientBoostingClassifier , F1 Scare: 0.8372978116079924
+[ 2024-09-01 10:56:25,941 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-09-01 10:56:25,943 ] 96 werkzeug - INFO -  * Debugger PIN: 117-434-498
+[ 2024-09-01 10:57:15,672 ] 96 werkzeug - INFO -  * Detected change in 'e:\\pw_proj\\BackOrder_Prediction-main\\application.py', reloading

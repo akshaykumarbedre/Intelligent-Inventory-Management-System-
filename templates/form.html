@@ -4,24 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ML-Based Inventory Prediction</title>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DY5DWSKR5V"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DY5DWSKR5V');
-  </script>
+  
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
     :root {
       --primary-color: #4CAF50;
       --secondary-color: #F0F0F0;
       --text-color: #333333;
       --background-color: #FFFFFF;
+      --accent-color: #2196F3;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', Arial, sans-serif;
       font-size: 16px;
       color: var(--text-color);
       background-color: var(--secondary-color);
@@ -29,17 +35,23 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      animation: fadeIn 1s ease-out;
     }
 
     header {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      animation: slideIn 0.8s ease-out;
     }
 
     header h1 {
       color: var(--primary-color);
-      font-size: 2em;
-      
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
 
     header p {
@@ -50,77 +62,97 @@
     form {
       width: 100%;
       max-width: 600px;
-      margin: 20px;
-      padding: 20px;
-      border: 1px solid var(--primary-color);
-      border-radius: 10px;
+      margin: 20px auto;
+      padding: 30px;
+      border: none;
+      border-radius: 15px;
       background-color: var(--background-color);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 1s ease-out 0.5s both;
+    }
+
+    form:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
     }
 
     .form-group {
       display: flex;
       flex-direction: column;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     label {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
       font-weight: bold;
+      color: var(--primary-color);
     }
 
     input[type="text"] {
-      padding: 10px;
-      border: 1px solid var(--primary-color);
-      border-radius: 5px;
+      padding: 12px;
+      border: 2px solid var(--secondary-color);
+      border-radius: 8px;
       font-size: 14px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
     }
 
     .field-info {
-      font-size: 0.7em;
-      color: var(--text-color);
-      margin-bottom: 5px;
+      font-size: 0.8em;
+      color: #666;
+      margin-top: 5px;
+      font-style: italic;
     }
 
     input[type="submit"] {
-      width: 100px;
-      padding: 10px;
+      width: 100%;
+      padding: 12px;
       margin-top: 20px;
       color: white;
       background-color: var(--primary-color);
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
-      align-self: center;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     input[type="submit"]:hover {
-      opacity: 0.9;
+      background-color: #45a049;
+      transform: translateY(-2px);
     }
 
     @media (max-width: 600px) {
-      label {
-        width: 100%;
-      }
-
-      input[type="text"] {
-        width: 100%;
-      }
-
-      input[type="submit"] {
-        width: 100%;
-        margin-left: 0;
+      form {
+        padding: 20px;
       }
     }
 
     .footer {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 30px;
+      animation: fadeIn 1s ease-out 1s both;
     }
 
     .footer p {
       font-size: 0.9em;
-      color: var(--text-color);
+      color: #666;
+    }
+
+    #final-result {
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 30px;
+      color: var(--primary-color);
+      font-weight: bold;
+      animation: fadeIn 0.5s ease-out;
     }
   </style>
 </head>
@@ -134,50 +166,75 @@
 <form action="{{url_for('predict_datapoint')}}" method="POST">
   <div class="form-group">
     <label for="national_inv">National Inventory:</label>
-    <input type="text" id="national_inv" name="national_inv" placeholder="Enter national inventory value  " required>
+    <input type="text" id="national_inv" name="national_inv" placeholder="Enter national inventory value" required>
     <div class="field-info">The total quantity of items available in the national inventory.</div>
   </div>
 
   <div class="form-group">
     <label for="lead_time">Lead Time:</label>
-    <input type="text" id="lead_time" name="lead_time" placeholder="Enter Lead Time value  " required>
+    <input type="text" id="lead_time" name="lead_time" placeholder="Enter Lead Time value" required>
     <div class="field-info">The time (in days) it takes from placing an order to receiving the goods.</div>
   </div>
 
   <div class="form-group">
     <label for="in_transit_qty">In-Transit Quantity:</label>
-    <input type="text" id="in_transit_qty" name="in_transit_qty" placeholder="Enter In-Transit Quantity value  " required>
+    <input type="text" id="in_transit_qty" name="in_transit_qty" placeholder="Enter In-Transit Quantity value" required>
     <div class="field-info">The quantity of items currently in transit from the supplier to the warehouse.</div>
   </div>
     
   <div class="form-group">
     <label for="forecast_3_month">Forecast for 3 Months:</label>
-    <input type="text" id="forecast_3_month" name="forecast_3_month" placeholder="Enter Forecast for 3 Months value  " required>
+    <input type="text" id="forecast_3_month" name="forecast_3_month" placeholder="Enter Forecast for 3 Months value" required>
     <div class="field-info">The predicted sales for the next 3 months.</div>
   </div>
   
   <div class="form-group">
     <label for="sales_1_month">Sales for 1 Month:</label>
-    <input type="text" id="sales_1_month" name="sales_1_month" placeholder="Enter Sales for 1 Month value  " required>
+    <input type="text" id="sales_1_month" name="sales_1_month" placeholder="Enter Sales for 1 Month value" required>
     <div class="field-info">The total sales for the last month.</div>
   </div>
   
   <div class="form-group">
     <label for="min_bank">Minimum Stock Level:</label>
-    <input type="text" id="min_bank" name="min_bank" placeholder="Enter minimum stock level value  " required>
+    <input type="text" id="min_bank" name="min_bank" placeholder="Enter minimum stock level value" required>
     <div class="field-info">The minimum quantity of stock that should be available at all times.</div>
   </div>
   
   <div class="form-group">
     <label for="perf_6_month_avg">Performance for 6 Months Average:</label>
-    <input type="text" id="perf_6_month_avg" name="perf_6_month_avg" placeholder="Enter Performance for 6 Months Average value  " required>
+    <input type="text" id="perf_6_month_avg" name="perf_6_month_avg" placeholder="Enter Performance for 6 Months Average value" required>
     <div class="field-info">The average performance (sales, etc.) over the past 6 months.</div>
   </div>         
 
-  <input type="submit" value="Submit">
+  <input type="submit" value="Predict">
 </form>
 
-<center><h1>{{final_result}}</h1></center>
+<div id="final-result">{{final_result}}</div>
+
+<div class="footer">
+  <p>&copy; 2024 ML-Based Inventory Prediction. All rights reserved.</p>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const inputs = form.querySelectorAll('input[type="text"]');
+    
+    inputs.forEach(input => {
+      input.addEventListener('focus', function() {
+        this.style.animation = 'fadeIn 0.3s ease-out';
+      });
+    });
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      this.style.animation = 'fadeIn 0.5s ease-out';
+      setTimeout(() => {
+        this.submit();
+      }, 500);
+    });
+  });
+</script>
 
 </body>
 </html>

@@ -1,0 +1,93 @@
+[ 2024-09-01 11:54:31,893 ] 102 root - INFO - Starting the Flask application
+[ 2024-09-01 11:54:31,898 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-09-01 11:54:31,902 ] 96 werkzeug - INFO -  * Debugger PIN: 117-434-498
+[ 2024-09-01 11:54:38,489 ] 29 root - INFO - Accessing index page
+[ 2024-09-01 11:54:38,493 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:54:38] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 11:54:39,269 ] 29 root - INFO - Accessing index page
+[ 2024-09-01 11:54:39,270 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:54:39] "GET / HTTP/1.1" 200 -
+[ 2024-09-01 11:54:46,697 ] 65 root - INFO - Accessing train_model page
+[ 2024-09-01 11:54:46,700 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:54:46] "GET /train_custom_data HTTP/1.1" 200 -
+[ 2024-09-01 11:54:49,346 ] 35 root - INFO - Received POST request for training custom data
+[ 2024-09-01 11:54:49,377 ] 51 root - INFO - File saved: uploads\Temp_data.csv
+[ 2024-09-01 11:54:49,377 ] 25 root - INFO - Data Ingestion method start
+[ 2024-09-01 11:54:49,589 ] 44 root - INFO - Data Ingestion competed
+[ 2024-09-01 11:54:49,624 ] 45 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  stop_auto_buy  rev_stop  went_on_backorder  Unnamed: 22
+0         11377          5             8.0                 0  ...             No       Yes                 No           No
+1         10821         66             8.0                 0  ...             No       Yes                 No           No
+2          3614         37            10.0                 0  ...             No       Yes                 No           No
+3          4799          0             NaN                 0  ...             No       Yes                 No           No
+4          8415        183             2.0                42  ...             No       Yes                 No           No
+
+[5 rows x 23 columns]
+[ 2024-09-01 11:54:49,642 ] 47 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  stop_auto_buy  rev_stop  went_on_backorder  Unnamed: 22
+0          2992          3            12.0                 0  ...             No       Yes                 No           No
+1          8428          0             9.0                 0  ...             No       Yes                 No           No
+2          8070        117             8.0                 0  ...             No       Yes                 No           No
+3          4352         14             2.0                 0  ...             No       Yes                 No           No
+4          1523         83             8.0                 8  ...             No       Yes                 No           No
+
+[5 rows x 23 columns]
+[ 2024-09-01 11:54:49,644 ] 41 root - INFO - initiate Data Tranfermation
+[ 2024-09-01 11:54:49,839 ] 59 root - ERROR - Error during training: Error occurred in python script name [e:\pw_proj\BackOrder_Prediction-main\src\components\data_transformation.py] line number [58] error message [The 'n_samples' parameter of resample must be an int in the range [1, inf) or None. Got 0 instead.]
+Traceback (most recent call last):
+  File "e:\pw_proj\BackOrder_Prediction-main\src\components\data_transformation.py", line 58, in initiate_data_transformation
+    resample_data = resample(
+  File "C:\Users\Akshay Kumar BM\AppData\Roaming\Python\Python310\site-packages\sklearn\utils\_param_validation.py", line 204, in wrapper
+    validate_parameter_constraints(
+  File "C:\Users\Akshay Kumar BM\AppData\Roaming\Python\Python310\site-packages\sklearn\utils\_param_validation.py", line 96, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'n_samples' parameter of resample must be an int in the range [1, inf) or None. Got 0 instead.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\pw_proj\BackOrder_Prediction-main\application.py", line 54, in training_pipeline
+    result = Training_model.initiate_training_pipeline()
+  File "e:\pw_proj\BackOrder_Prediction-main\src\pipelines\training_pipeline.py", line 13, in initiate_training_pipeline
+    train_data, test_data, preprocesser = self.data_transform_obj.initiate_data_transformation(
+  File "e:\pw_proj\BackOrder_Prediction-main\src\components\data_transformation.py", line 97, in initiate_data_transformation
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [e:\pw_proj\BackOrder_Prediction-main\src\components\data_transformation.py] line number [58] error message [The 'n_samples' parameter of resample must be an int in the range [1, inf) or None. Got 0 instead.]
+[ 2024-09-01 11:54:49,843 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:54:49] "POST /train_custom_data HTTP/1.1" 200 -
+[ 2024-09-01 11:56:03,039 ] 35 root - INFO - Received POST request for training custom data
+[ 2024-09-01 11:56:03,039 ] 51 root - INFO - File saved: uploads\Temp_data.csv
+[ 2024-09-01 11:56:03,039 ] 25 root - INFO - Data Ingestion method start
+[ 2024-09-01 11:56:03,195 ] 44 root - INFO - Data Ingestion competed
+[ 2024-09-01 11:56:03,211 ] 45 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0             2       12.0               0                 0  ...         No            Yes        No                 No
+1             6        NaN               0                 0  ...         No            Yes        No                 No
+2           439        8.0             158              1363  ...         No            Yes        No                 No
+3             9        2.0               0                 0  ...         No            Yes        No                 No
+4            14        8.0               0                 0  ...         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:56:03,227 ] 47 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  forecast_3_month  ...  ppap_risk  stop_auto_buy  rev_stop  went_on_backorder
+0             3        8.0               0                 1  ...         No            Yes        No                 No
+1           500        2.0               0                 0  ...         No            Yes        No                 No
+2             9        2.0               0                 0  ...         No            Yes        No                 No
+3            70        8.0              66                 0  ...         No            Yes        No                 No
+4             3        8.0               0                 0  ...         No            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 11:56:03,227 ] 41 root - INFO - initiate Data Tranfermation
+[ 2024-09-01 11:56:03,336 ] 27 root - INFO - Data Tranfermation piple start
+[ 2024-09-01 11:56:03,352 ] 91 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-09-01 11:56:03,352 ] 28 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2024-09-01 11:56:03,727 ] 48 root - INFO - Model Report : {'RandomForestClassifier': 0.7884615384615385, 'DecisionTreeClassifier': 0.7446808510638298, 'SGDClassifier': 0.78, 'KNeighborsClassifier': 0.6588235294117647, 'GradientBoostingClassifier': 0.7961165048543689}
+[ 2024-09-01 11:56:03,727 ] 59 root - INFO - Best Model Found , Model Name : GradientBoostingClassifier , Accuary is : 79.61
+[ 2024-09-01 11:56:03,727 ] 55 root - INFO - Training pipeline initiated successfully
+[ 2024-09-01 11:56:03,727 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:56:03] "POST /train_custom_data HTTP/1.1" 200 -
+[ 2024-09-01 11:56:13,031 ] 65 root - INFO - Accessing train_model page
+[ 2024-09-01 11:56:13,032 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:56:13] "GET /train_custom_data HTTP/1.1" 200 -
+[ 2024-09-01 11:56:15,116 ] 71 root - INFO - Accessing prediction form
+[ 2024-09-01 11:56:15,121 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:56:15] "GET /predict HTTP/1.1" 200 -
+[ 2024-09-01 11:56:24,506 ] 74 root - INFO - Received POST request for prediction
+[ 2024-09-01 11:56:24,508 ] 55 root - INFO - Dataframe Gathered
+[ 2024-09-01 11:56:24,514 ] 95 root - INFO - Prediction result: The Product Went on Backorder.
+[ 2024-09-01 11:56:24,514 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:56:24] "POST /predict HTTP/1.1" 200 -
+[ 2024-09-01 11:56:49,407 ] 71 root - INFO - Accessing prediction form
+[ 2024-09-01 11:56:49,407 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Sep/2024 11:56:49] "GET /predict HTTP/1.1" 200 -

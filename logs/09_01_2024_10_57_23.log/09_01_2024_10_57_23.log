@@ -1,0 +1,33 @@
+[ 2024-09-01 10:57:24,906 ] 24 root - INFO - Data Ingestion method start
+[ 2024-09-01 10:57:28,448 ] 38 root - INFO - Data Ingestion competed
+[ 2024-09-01 10:57:28,843 ] 39 root - INFO - Data Ingestion competed train data 
+   national_inv  lead_time  in_transit_qty  ...  stop_auto_buy  rev_stop  went_on_backorder
+0           124        8.0               0  ...            Yes        No                 No
+1             6        8.0               0  ...            Yes        No                 No
+2             7        2.0               0  ...            Yes        No                 No
+3            14        8.0               0  ...            Yes        No                 No
+4             7       14.0               0  ...            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 10:57:28,858 ] 41 root - INFO - Data Ingestion competed test data 
+   national_inv  lead_time  in_transit_qty  ...  stop_auto_buy  rev_stop  went_on_backorder
+0            21        8.0               0  ...            Yes        No                 No
+1            85        2.0               0  ...            Yes        No                 No
+2             8        8.0               8  ...            Yes        No                 No
+3             4        2.0               0  ...            Yes        No                 No
+4            12        2.0               0  ...            Yes        No                 No
+
+[5 rows x 22 columns]
+[ 2024-09-01 10:57:28,886 ] 44 root - INFO - initiate Data Tranfermation
+[ 2024-09-01 10:57:31,651 ] 27 root - INFO - Data Tranfermation piple start
+[ 2024-09-01 10:57:31,688 ] 94 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2024-09-01 10:57:31,728 ] 28 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2024-09-01 10:57:32,799 ] 48 root - INFO - Model Report : {'RandomForestClassifier': 0.7440828402366865, 'DecisionTreeClassifier': 0.6746626686656672, 'SGDClassifier': 0.7148659626320063, 'KNeighborsClassifier': 0.7223587223587224, 'GradientBoostingClassifier': 0.7356664184661206}
+[ 2024-09-01 10:57:32,800 ] 59 root - INFO - Best Model Found , Model Name : RandomForestClassifier , F1 Scare: 0.7440828402366865
+[ 2024-09-01 10:57:32,989 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.194.63:5000
+[ 2024-09-01 10:57:32,989 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-09-01 10:57:32,996 ] 96 werkzeug - INFO -  * Restarting with stat
+[ 2024-09-01 11:03:19,909 ] 96 werkzeug - INFO -  * Restarting with stat
